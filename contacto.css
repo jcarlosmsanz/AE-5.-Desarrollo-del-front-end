@@ -1,0 +1,335 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("fuentes/Mulish.ttf");
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: url('images/fondo.png') center center no-repeat; /* Cambia la ruta a la ubicación real de tu imagen de fondo */
+  background-size: 100% auto; /* Ajusta el tamaño de la imagen para cubrir el ancho de la página */
+  background-position: bottom;
+}
+
+
+
+header {
+  width: 100%;
+  height: 176px;
+  flex-shrink: 0;
+  background: url(images/acuarela.png) center center no-repeat;
+  background-size: cover;
+  position: fixed; /* Hace que el header sea fijo */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Asegura que el header esté por encima del contenido */
+}
+
+.logo {
+  color: #221528;
+  width: 64px;
+  height: 64px;
+  max-height: 100%;
+}
+
+.logo img {
+  width: auto;
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Centra los elementos del nav */
+  align-items: center;
+  gap: 100px;
+
+  margin-top: 28px;
+}
+
+nav a {
+  color: #506a82;
+  font-family: Mulish;
+  text-decoration: none;
+  margin-right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 271px;
+}
+
+.input {
+  box-sizing: border-box;
+  color: #191919;
+  padding: 15px 15px 15px 35px;
+  width: 320px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 24px;
+  border: 1px solid var(--brand-blue-brand, #506a82);
+  background: var(--neutral-white, #fff);
+}
+
+.input-icon {
+  color: #191919;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.perfil {
+
+  width: 64px;
+height: 64px;
+  border-radius: 64px;
+  border: 1px solid var(--brand-medium-dark-blue, #353256);
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  
+  /* Sombras botones/Secundarios/Sombra boton secundario */
+  box-shadow: 8px 8px 8px 0px #CFE0D7;
+}
+
+
+
+h1 {
+  color: var(--brand-medium-dark-blue, #353256);
+  text-align: center;
+  font-family: Oxygen;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 56px */
+  margin-top: 180px;
+}
+
+h2 {
+  color: var(--brand-medium-dark-blue, #353256);
+  text-align: center;
+  font-family: Oxygen;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 56px */
+}
+
+p {
+  color: var(--brand-dark-blue, #221528);
+
+  font-family: Mulish;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 33.6px;
+}
+
+.nosotros {
+  width: fixed 697px;
+  height: fixed 280px;
+  border-radius: 24px;
+}
+
+.novavida {
+  width: 432px;
+  height: 370.594px;
+  margin-right: 121px;
+}
+section {
+  padding: 20px;
+}
+
+.div1,
+.div2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-left: 92px;
+  margin-right: 89px;
+  margin-top: 60px;
+  padding: 0 20px; /* Añade relleno para mantener las proporciones */
+}
+
+.parrafo_div1,
+.parrafo_div2 {
+  width: 100%; /* El contenedor del párrafo ocupa todo el ancho disponible por defecto */
+}
+
+.imagen_div1,
+.imagen_div2 {
+  width: 100%; /* El contenedor de la imagen ocupa todo el ancho disponible por defecto */
+}
+
+/* Media query para ajustar el diseño en pantallas más pequeñas */
+@media (min-width: 768px) {
+  .div1,
+  .div2 {
+    flex-direction: row;
+  }
+
+  .parrafo_div1,
+  .parrafo_div2 {
+    width: 630px; /* Asigna un ancho fijo al contenedor del párrafo en pantallas más grandes */
+  }
+
+  .imagen_div1,
+  .imagen_div2 {
+    width: auto; /* El contenedor de la imagen obtiene su ancho natural en pantallas más grandes */
+  }
+}
+
+.resaltado {
+  color: #cb4d2c;
+}
+
+.div2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 121px;
+  margin-top: 48px;
+  margin-left: 152px;
+  margin-right: 105px;
+}
+
+.contacta {
+  margin-left: 142px;
+  margin-right: 144px;
+}
+
+.div3 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 159px;
+  margin-left: 360px;
+  margin-right: 261px;
+  margin-bottom: 158px;
+  margin-top: 40px;
+}
+
+.contactos {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px 24px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.telefono,
+.correo,
+.whatsapp {
+  display: flex;
+  align-items: center; /* Centra el contenido de cada div en el eje vertical */
+  margin-bottom: 20px; /* Agrega margen inferior entre los divs */
+}
+
+.telefono img,
+.correo img,
+.whatsapp img {
+  margin-right: 10px; /* Ajusta el espacio entre la imagen y el párrafo */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 23px;
+}
+
+form input {
+  display: flex;
+  width: 438px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 24px;
+  border: 1px solid var(--brand-blue-brand, #506a82);
+  /* Sombras botones/Secundarios/Sombra boton secundario */
+  box-shadow: 8px 8px 8px 0px #cfe0d7;
+}
+
+form textarea {
+  display: flex;
+  width: 438px;
+  height: 113px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 24px;
+  border: 1px solid var(--brand-blue-brand, #506a82);
+  /* Sombras botones/Secundarios/Sombra boton secundario */
+  box-shadow: 8px 8px 8px 0px #cfe0d7;
+}
+
+form button {
+  display: flex;
+  width: 440px;
+  height: 42px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 32px;
+  background: var(--neutral-medium-grease, #cfe0d7);
+  /* Sombras botones/Sombra des ppal */
+  box-shadow: 8px 8px 8px 0px #96b1ae;
+}
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 225px;
+  background: #353256;
+}
+
+.footer-column {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.footer-column h4 {
+  color: var(--brand-ligth-blue, #96B1AE);
+/* Texto/Texto descripción */
+font-family: Mulish;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 33.6px */
+}
+
+.footer-column p {
+  color: var(--neutral-ligth-grease, #E2EDE5);
+/* Texto/Texto tarjetas */
+font-family: Mulish;
+font-size: 20px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 28px */
+}
+
+footer img {
+  width: 150px;
+  height: 132px;
+}
